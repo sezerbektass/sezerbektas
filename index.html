@@ -27,28 +27,7 @@
             text-decoration: underline;
         }
 
-        /* Sıkça Sorulan Sorular Stili */
-        .faq-container {
-            width: 60%;
-            margin: 30px auto;
-            text-align: left;
-        }
-        .faq-question {
-            background-color: #0033a0;
-            color: white;
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .faq-answer {
-            display: none;
-            padding: 10px;
-            border: 1px solid #0033a0;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
-
+       
     </style>
 </head>
 <body>
@@ -56,28 +35,4 @@
     <p><strong>Email:</strong> <a href="mailto:sezer.bektas99@gmail.com">sezer.bektas99@gmail.com</a></p>
     <p><strong>Telefon:</strong> <a href="tel:+905393150275">539 315 0275</a></p>
 
-    <!-- Sıkça Sorulan Sorular Bölümü -->
-    <h2>Sıkça Sorulan Sorular (SSS)</h2>
-    <div class="faq-container">
-        <div class="faq-question" onclick="toggleAnswer(1)">📌 Web sitemi nasıl oluşturabilirim?</div>
-        <div class="faq-answer" id="answer1">Web sitenizi oluşturmak için HTML, CSS ve JavaScript öğrenebilirsiniz. Alternatif olarak, WordPress gibi hazır platformlar da kullanılabilir.</div>
-
-        <div class="faq-question" onclick="toggleAnswer(2)">📌 E-posta adresime nasıl ulaşabilirim?</div>
-        <div class="faq-answer" id="answer2">Yukarıda bulunan <a href="mailto:sezer.bektas@gmail.com99">sezer.bektas@gmail.com99</a> adresine e-posta gönderebilirsiniz.</div>
-
-        <div class="faq-question" onclick="toggleAnswer(3)">📌 Telefon numaramdan nasıl iletişime geçebilirim?</div>
-        <div class="faq-answer" id="answer3">Telefon numarama tıklayarak doğrudan arama yapabilirsiniz: <a href="tel:+905393150275">539 315 0275</a>.</div>
-    </div>
-
-    <script>
-        function toggleAnswer(id) {
-            var answer = document.getElementById("answer" + id);
-            if (answer.style.display === "block") {
-                answer.style.display = "none";
-            } else {
-                answer.style.display = "block";
-            }
-        }
-    </script>
-</body>
-</html>
+    
