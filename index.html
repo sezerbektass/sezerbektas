@@ -3,37 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sezer Bektaş</title>
-
+    <title>Fenerbahçe</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             text-align: center;
-            margin: 50px;
-        }
-        h1 {
-            color: darkblue;
-        }
-        p {
-            font-size: 18px;
-        }
-        a {
-            color: darkred;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
+            background: linear-gradient(to bottom, yellow, navy);
+            font-family: Arial, sans-serif;
         }
 
-       
+        .container {
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        img {
+            width: 150px;
+            margin: 20px 0;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: white;
+            color: navy;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: navy;
+            color: white;
+        }
     </style>
 </head>
 <body>
-    <h1>Sezer Bektaş</h1>
-                <p><a href="sss.html">📌 Sıkça Sorulan Sorular (SSS) sayfasına git</a></p>
-
-    <p><strong>Email:</strong> <a href="mailto:sezer.bektas99@gmail.com">sezer.bektas99@gmail.com</a></p>
-    <p><strong>Telefon:</strong> <a href="tel:+905393150275">539 315 0275</a></p>
-
-    
+    <div class="container">
+        <h1>FENERBAHÇE</h1>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fenerbahçe_SK.svg/800px-Fenerbahçe_SK.svg.png" alt="Fenerbahçe Logosu">
+        <div class="buttons">
+            <a href="tarih.html" class="btn">Fenerbahçe Tarihi</a>
+            <a href="kadro.html" class="btn">2024-2025 Kadro</a>
+        </div>
+    </div>
+</body>
+</html>
