@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
@@ -6,32 +6,31 @@
     <title>Fenerbahçe</title>
     <style>
         body {
+            background-color: #FFB901; /* Arka plan rengi */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
-            background: linear-gradient(to bottom, yellow, navy);
+            height: 100vh; /* Ekranın tamamını kaplasın */
             font-family: Arial, sans-serif;
+            text-align: center;
         }
 
         .container {
-            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         h1 {
-            font-size: 50px;
+            font-size: 40px;
             font-weight: bold;
-            text-shadow: 2px 2px 4px black;
-        }
-
-        img {
-            width: 150px;
             margin: 20px 0;
         }
 
+       
         .buttons {
             margin-top: 20px;
         }
@@ -39,8 +38,8 @@
         .btn {
             display: inline-block;
             padding: 10px 20px;
-            background: white;
-            color: navy;
+            background: rgba(38, 38, 107, 0.943);
+            color: white;
             text-decoration: none;
             font-weight: bold;
             border-radius: 5px;
@@ -48,15 +47,16 @@
         }
 
         .btn:hover {
-            background: navy;
-            color: white;
+            background: white;
+            color: rgba(65, 65, 231, 0.57);
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <img src="resimler/yeni.jpg" alt="Fenerbahçe Logosu" width="500">
+
         <h1>FENERBAHÇE</h1>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fenerbahçe_SK.svg/800px-Fenerbahçe_SK.svg.png" alt="Fenerbahçe Logosu">
         <div class="buttons">
             <a href="tarih.html" class="btn">Fenerbahçe Tarihi</a>
             <a href="kadro.html" class="btn">2024-2025 Kadro</a>
