@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fenerbahçe Tarihi</title>
+    <title>Fenerbahçe</title>
     <style>
         body {
-            margin: 0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #FFB901; /* Arka plan rengi */
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            background-color: rgba(0, 0, 0, 0.5);
             padding: 20px;
-            background: linear-gradient(to bottom, yellow, navy);
-            font-family: Arial, sans-serif;
-            color: white;
-            text-align: center;
+            border-radius: 10px;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 36px;
+            font-weight: bold;
             text-shadow: 2px 2px 4px black;
         }
 
-        .content {
-            max-width: 800px;
-            margin: auto;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
+        .buttons {
+            margin-top: 20px;
         }
 
         .btn {
@@ -42,13 +52,83 @@
             background: navy;
             color: white;
         }
+
+        p {
+            text-align: left;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-    <h1>Fenerbahçe Tarihi</h1>
-    <div class="content">
-        <p>Fenerbahçe Spor Kulübü, 1907 yılında İstanbul'da kurulmuştur. Türkiye'nin en köklü ve başarılı futbol kulüplerinden biridir...</p>
+
+    <h1>Fenerbahçe Spor Kulübü Tarihi</h1>
+
+    <div class="container">
+        <h2>Kuruluş (1907)</h2>
+        <p>
+            Fenerbahçe Spor Kulübü, 1907 yılında İstanbul'un Kadıköy ilçesinde <strong>Ziya Songülen, Ayetullah Bey ve Necip Okaner</strong> tarafından kurulmuştur.
+            O dönemde Osmanlı'da Türk gençlerinin futbol oynaması yasaktı, bu yüzden kulüp ilk yıllarında gizli bir şekilde faaliyet göstermiştir.
+        </p>
+
+        <p>
+            Kulübün adı, Kadıköy'deki <strong>Fenerbahçe Burnu</strong>ndan esinlenerek konulmuştur. İlk renkleri <strong>sarı-beyaz</strong> iken, 1910 yılında <strong>sarı-lacivert</strong> olarak değiştirilmiştir.
+        </p>
+
+        <h2>İlk Başarılar ve Gelişim (1910 - 1950)</h2>
+        <ul>
+            <li><strong>1911-12 İstanbul Ligi Şampiyonluğu</strong>: Fenerbahçe, İstanbul Ligi'nde ilk kez şampiyon oldu.</li>
+            <li><strong>İşgal Yıllarında Direniş</strong>: 1918-1923 yılları arasında Fenerbahçe, işgal güçlerinin futbol takımlarını yenerek Türk halkının moral kaynağı olmuştur.</li>
+            <li><strong>Cumhuriyetin İlk Yılları</strong>: 1923'te Türkiye Cumhuriyeti kurulduktan sonra Fenerbahçe, Türkiye futbolunun en güçlü takımlarından biri haline geldi.</li>
+        </ul>
+
+        <h2>Profesyonel Futbol Dönemi (1950 - 1980)</h2>
+        <ul>
+            <li>1959 yılında Türkiye'de ilk kez <strong>Millî Lig (günümüz Süper Lig)</strong> düzenlendi ve Fenerbahçe ilk sezonun şampiyonu oldu.</li>
+            <li>1967 yılında Fenerbahçe, Türkiye'nin ilk uluslararası başarısını kazandı ve <strong>Balkan Kupası</strong>'nı alan ilk Türk takımı oldu.</li>
+        </ul>
+
+        <h2>Avrupa Başarıları ve Modern Dönem (1980 - 2000)</h2>
+        <ul>
+            <li>1988-89 sezonunda Fenerbahçe, <strong>103 golle Süper Lig rekorunu</strong> kırarak şampiyon oldu.</li>
+            <li>1996 yılında <strong>Arsène Wenger'in Monaco'sunu</strong> eleyerek Avrupa'da büyük ses getirdi.</li>
+        </ul>
+
+        <h2>2000'ler ve Şampiyonlar Ligi Başarısı (2000 - 2010)</h2>
+        <ul>
+            <li>2007-08 sezonunda <strong>Şampiyonlar Ligi'nde çeyrek finale</strong> çıkarak tarihi bir başarı elde etti.</li>
+            <li>2012-13 sezonunda <strong>UEFA Avrupa Ligi'nde yarı finale</strong> çıktı.</li>
+            <li>2010'da <strong>Süper Lig ve Türkiye Kupası’nı</strong> kazandı.</li>
+        </ul>
+
+        <h2>Son Dönem (2010 - Günümüz)</h2>
+        <ul>
+            <li>2013 yılında <strong>Ziraat Türkiye Kupası</strong>nı kazandı.</li>
+            <li>2014 yılında <strong>Kadın Basketbol Takımı</strong> EuroLeague'de final oynadı.</li>
+            <li>2016-17 sezonunda <strong>Fenerbahçe Erkek Basketbol Takımı, EuroLeague şampiyonu</strong> oldu.</li>
+            <li>2023-24 sezonunda <strong>Süper Lig’de şampiyonluk yarışı</strong> içinde mücadele etti.</li>
+        </ul>
+
+        <h2>Fenerbahçe'nin Branşları</h2>
+        <ul>
+            <li>🏀 <strong>Basketbol</strong> (2017 EuroLeague Şampiyonluğu)</li>
+            <li>🏐 <strong>Voleybol</strong></li>
+            <li>🏊 <strong>Yüzme</strong></li>
+            <li>🥊 <strong>Boks</strong></li>
+            <li>🏃 <strong>Atletizm</strong></li>
+        </ul>
+
+        <h2>Sonuç</h2>
+        <p>
+            Fenerbahçe, Türkiye'nin en köklü ve en büyük spor kulüplerinden biridir. Süper Lig, Avrupa kupaları ve diğer branşlardaki başarılarıyla adını tarihe altın harflerle yazdırmıştır.
+            Kulübün en büyük amacı, hem ulusal hem de uluslararası alanda başarılar kazanmaya devam etmektir.
+        </p>
+
+        <h2 style="text-align: center;">💛💙 "Ne mutlu Fenerbahçeliyim diyene!" 🚀🔥</h2>
+
     </div>
+
     <a href="index.html" class="btn">Ana Sayfa</a>
+
 </body>
 </html>
