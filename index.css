@@ -1,0 +1,45 @@
+body {
+    background-color: #FFB901; /* Arka plan rengi */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ekranın tamamını kaplasın */
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+
+.buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(38, 38, 107, 0.943);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: white;  
+    color: rgba(65, 65, 231, 0.57);
+}

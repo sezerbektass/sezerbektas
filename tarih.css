@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFB901;
+    color: #001F54;
+  }
+  
+  header {
+    background-color: #FFB901;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header img {
+    height: 250px;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    font-size: 32px;
+    margin: 0;
+  }
+  
+  /* Giriş Bölümü */
+  .introduction {
+    padding: 20px;
+    background-color: #FFB901;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .introduction h2 {
+    font-size: 24px;
+    color: #001F54;
+  }
+  
+  .introduction p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .introduction img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  /* Başarılar ve Önemli Anlar */
+  .achievements {
+    padding: 20px;
+    background-color: #FFB901;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .achievements h2 {
+    font-size: 26px;
+    color: #001F54;
+  }
+  
+  .achievement {
+    margin-bottom: 30px;
+  }
+  
+  .achievement img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-left: 275px;
+  }
+  
+  .achievement h3 {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+  
+  /* Efsane Futbolcular Bölümü */
+  .legendary-players {
+    padding: 20px;
+    background-color: #FFB901;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .legendary-players h2 {
+    font-size: 26px;
+    color: #001F54;
+  }
+  
+  .legendary-players ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .legendary-players ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #001F54;
+    color: #fff;
+    margin-top: 30px;
+  }
+  .buttons {
+    margin-top: 20px;
+    margin-left: 275px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(38, 38, 107, 0.943);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.btn:hover {
+    background: white;  
+    color: rgba(65, 65, 231, 0.57);
+}
+  
