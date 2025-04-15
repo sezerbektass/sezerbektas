@@ -48,8 +48,8 @@ body {
 
   .player-card img {
     width: 100%;
-    max-width: 200px;   /* resmin maksimum genişliği */
-    max-height: 200px;  /* resmin maksimum yüksekliği */
+    max-width: 200px;   
+    max-height: 200px;  
     margin: 0 auto;
    
   }
