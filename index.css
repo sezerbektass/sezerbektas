@@ -1,11 +1,11 @@
 body {
-    background-color: #FFB901; /* Arka plan rengi */
+    background-color: #FFB901; 
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ekranın tamamını kaplasın */
+    height: 100vh; 
     font-family: Arial, sans-serif;
     text-align: center;
 }
