@@ -19,8 +19,14 @@ function alanOlustur() {
       hucre.dataset.y = y;
       hucre.dataset.x = x;
       hucre.addEventListener("click", hucreTiklandi);
+      hucre.addEventListener("contextmenu", hucreSagTiklandi);
       alan.appendChild(hucre);
-      oyunMatrisi[y][x] = { mayin: false, acildi: false, dom: hucre };
+      oyunMatrisi[y][x] = {
+        mayin: false,
+        acildi: false,
+        bayrak: false,
+        dom: hucre
+      };
     }
   }
 
@@ -42,7 +48,7 @@ function hucreTiklandi(e) {
   const x = parseInt(e.target.dataset.x);
   const hucre = oyunMatrisi[y][x];
 
-  if (hucre.acildi) return;
+  if (hucre.acildi || hucre.bayrak) return;
 
   hucre.acildi = true;
   hucre.dom.classList.add("acildi");
@@ -60,6 +66,20 @@ function hucreTiklandi(e) {
       bosAlanAc(y, x);
     }
   }
+}
+
+function hucreSagTiklandi(e) {
+  e.preventDefault();
+  if (oyunBitti) return;
+
+  const y = parseInt(e.target.dataset.y);
+  const x = parseInt(e.target.dataset.x);
+  const hucre = oyunMatrisi[y][x];
+
+  if (hucre.acildi) return;
+
+  hucre.bayrak = !hucre.bayrak;
+  hucre.dom.textContent = hucre.bayrak ? "🚩" : "";
 }
 
 function cevreMayinSayisi(y, x) {
