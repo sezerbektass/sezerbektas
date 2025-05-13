@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta charset="UTF-8">
+     <title>Document</title>
+     <link rel="stylesheet" href="csss/kayit.css">
+
+</head>
+    <body>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="kadro.html">Futbol Kadro</a></li>
+          <li><a href="tarih.html">Futbol Tarihi</a></li>
+          <li><a href="basketbol.html">Basketbol Tarihi</a></li>
+          <li><a href="erkekvoleybol.html">Erkek Voleybol</a></li>
+          <li><a href="kadınvoleybol.html">Kadın Voleybol</a></li>
+          <li><a href="ilklerveenler.html">İlkler ve Enler</a></li>
+          <li><a href="sampiyonformalar.html">Şampiyon Formalar</a></li>
+          <li><a href="sss.html">SSS</a></li>
+          <li><a href="kayit.html">Kayıt</a></li>
+        </ul>
+      </nav>
+    
+        <div class="container">
+          <h1>Fenerbahçe Derneği Kayıt Formu</h1>
+          <form action="#" method="post">
+            <label for="ad">Ad:</label>
+            <input type="text" id="ad" name="ad" required>
+      
+            <label for="soyad">Soyad:</label>
+            <input type="text" id="soyad" name="soyad" required>
+      
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="telefon">Telefon:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+      
+            <label for="dogumtarihi">Doğum Tarihi:</label>
+            <input type="date" id="dogumtarihi" name="dogumtarihi" required>
+      
+            <label for="cinsiyet">Cinsiyet:</label>
+            <select id="cinsiyet" name="cinsiyet">
+              <option value="erkek">Erkek</option>
+              <option value="kadın">Kadın</option>
+              <option value="belirtmek istemiyorum">Belirtmek İstemiyorum</option>
+            </select>
+      
+            <label for="aciklama">Kendinizi Kısaca Tanıtın:</label>
+            <textarea id="aciklama" name="aciklama" rows="4"></textarea>
+      
+            <button type="submit">Kaydol</button>
+          </form>
+         
+        </div>
+      
+    </body>
+</html>
