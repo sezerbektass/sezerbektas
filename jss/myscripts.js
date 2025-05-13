@@ -1,111 +1,114 @@
-const rows = 9;
-const cols = 9;
-const mineCount = 10;
-let minefield = document.getElementById("minefield");
+const satir = 9;
+const sutun = 9;
+const mayinSayisi = 10;
+const alan = document.getElementById("oyun-alani");
 
-let field = [];
-let gameOver = false;
+let oyunMatrisi = [];
+let oyunBitti = false;
 
-function createBoard() {
-  field = [];
-  minefield.innerHTML = "";
-  gameOver = false;
+function alanOlustur() {
+  alan.innerHTML = "";
+  oyunMatrisi = [];
+  oyunBitti = false;
 
-  // Tüm hücreleri oluştur
-  for (let r = 0; r < rows; r++) {
-    field[r] = [];
-    for (let c = 0; c < cols; c++) {
-      let cell = document.createElement("div");
-      cell.classList.add("cell");
-      cell.dataset.row = r;
-      cell.dataset.col = c;
-      cell.addEventListener("click", clickCell);
-      minefield.appendChild(cell);
-      field[r][c] = { mine: false, revealed: false, element: cell };
+  for (let y = 0; y < satir; y++) {
+    oyunMatrisi[y] = [];
+    for (let x = 0; x < sutun; x++) {
+      const hucre = document.createElement("div");
+      hucre.classList.add("kare");
+      hucre.dataset.y = y;
+      hucre.dataset.x = x;
+      hucre.addEventListener("click", hucreTiklandi);
+      alan.appendChild(hucre);
+      oyunMatrisi[y][x] = { mayin: false, acildi: false, dom: hucre };
     }
   }
 
-  // Mayınları rastgele yerleştir
-  let placed = 0;
-  while (placed < mineCount) {
-    let r = Math.floor(Math.random() * rows);
-    let c = Math.floor(Math.random() * cols);
-    if (!field[r][c].mine) {
-      field[r][c].mine = true;
-      placed++;
+  let yerlestirilen = 0;
+  while (yerlestirilen < mayinSayisi) {
+    let y = Math.floor(Math.random() * satir);
+    let x = Math.floor(Math.random() * sutun);
+    if (!oyunMatrisi[y][x].mayin) {
+      oyunMatrisi[y][x].mayin = true;
+      yerlestirilen++;
     }
   }
 }
 
-function clickCell(e) {
-  if (gameOver) return;
+function hucreTiklandi(e) {
+  if (oyunBitti) return;
 
-  let row = parseInt(e.target.dataset.row);
-  let col = parseInt(e.target.dataset.col);
-  let cell = field[row][col];
+  const y = parseInt(e.target.dataset.y);
+  const x = parseInt(e.target.dataset.x);
+  const hucre = oyunMatrisi[y][x];
 
-  if (cell.revealed) return;
+  if (hucre.acildi) return;
 
-  cell.revealed = true;
-  cell.element.classList.add("revealed");
+  hucre.acildi = true;
+  hucre.dom.classList.add("acildi");
 
-  if (cell.mine) {
-    cell.element.textContent = "💣";
-    alert("BOOM! Oyun bitti.");
-    gameOver = true;
-    revealAll();
+  if (hucre.mayin) {
+    hucre.dom.textContent = "💣";
+    alert("💥 BOOM! Oyun bitti.");
+    oyunBitti = true;
+    tumMayinlariGoster();
   } else {
-    let count = countMines(row, col);
-    if (count > 0) {
-      cell.element.textContent = count;
+    let sayi = cevreMayinSayisi(y, x);
+    if (sayi > 0) {
+      hucre.dom.textContent = sayi;
     } else {
-      // Etrafı aç
-      revealAround(row, col);
+      bosAlanAc(y, x);
     }
   }
 }
 
-function countMines(r, c) {
-  let count = 0;
-  for (let dr = -1; dr <= 1; dr++) {
-    for (let dc = -1; dc <= 1; dc++) {
-      let nr = r + dr;
-      let nc = c + dc;
-      if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && field[nr][nc].mine) {
-        count++;
-      }
-    }
-  }
-  return count;
-}
-
-function revealAround(r, c) {
-  for (let dr = -1; dr <= 1; dr++) {
-    for (let dc = -1; dc <= 1; dc++) {
-      let nr = r + dr;
-      let nc = c + dc;
+function cevreMayinSayisi(y, x) {
+  let toplam = 0;
+  for (let dy = -1; dy <= 1; dy++) {
+    for (let dx = -1; dx <= 1; dx++) {
+      const ny = y + dy;
+      const nx = x + dx;
       if (
-        nr >= 0 &&
-        nr < rows &&
-        nc >= 0 &&
-        nc < cols &&
-        !field[nr][nc].revealed
+        ny >= 0 &&
+        ny < satir &&
+        nx >= 0 &&
+        nx < sutun &&
+        !(dy === 0 && dx === 0)
       ) {
-        clickCell({ target: field[nr][nc].element });
+        if (oyunMatrisi[ny][nx].mayin) toplam++;
+      }
+    }
+  }
+  return toplam;
+}
+
+function bosAlanAc(y, x) {
+  for (let dy = -1; dy <= 1; dy++) {
+    for (let dx = -1; dx <= 1; dx++) {
+      const ny = y + dy;
+      const nx = x + dx;
+      if (
+        ny >= 0 &&
+        ny < satir &&
+        nx >= 0 &&
+        nx < sutun &&
+        !oyunMatrisi[ny][nx].acildi
+      ) {
+        hucreTiklandi({ target: oyunMatrisi[ny][nx].dom });
       }
     }
   }
 }
 
-function revealAll() {
-  for (let r = 0; r < rows; r++) {
-    for (let c = 0; c < cols; c++) {
-      if (field[r][c].mine) {
-        field[r][c].element.textContent = "💣";
-        field[r][c].element.classList.add("revealed");
+function tumMayinlariGoster() {
+  for (let y = 0; y < satir; y++) {
+    for (let x = 0; x < sutun; x++) {
+      if (oyunMatrisi[y][x].mayin) {
+        oyunMatrisi[y][x].dom.textContent = "💣";
+        oyunMatrisi[y][x].dom.classList.add("acildi");
       }
     }
   }
 }
 
-createBoard();
+alanOlustur();
