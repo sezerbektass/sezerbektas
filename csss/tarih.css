@@ -1,0 +1,132 @@
+/* Genel Body Ayarları */
+.navbar {
+  background-color: #FFB901;
+  padding: 15px 0;
+  margin: 0;
+  border-bottom: 2px solid #001F54;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #001F54;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #001F54;
+  color: #FFB901;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FFB901;
+  margin: 0;
+  padding: 40px;
+  color: #001F54;
+  overflow-x: hidden;
+}
+
+/* Sayfa Ana Konteyneri */
+.container {
+  padding-top: 100px; /* Navbar yüksekliği kadar boşluk bırak */
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+
+/* Logo */
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+/* Başlık */
+h1 {
+  margin-bottom: 30px;
+  color: #001F54;
+}
+
+/* Giriş Paragrafları */
+.intro {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* Kartların Konteyneri */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* Kart Stili */
+.card {
+  background-color: #FFDC73;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 250px;
+  min-width: 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Kart Başlığı */
+.card h3 {
+  margin-top: 0;
+  color: #001F54;
+}
+
+/* Kart Paragraf */
+.card p {
+  font-size: 15px;
+}
+
+/* Buton Stili */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #001F54;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #003072;
+}
