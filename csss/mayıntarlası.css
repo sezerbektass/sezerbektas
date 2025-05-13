@@ -10,109 +10,30 @@ h1 {
   margin-bottom: 20px;
 }
 
-#minefield {
+#oyun-alani {
   display: grid;
   grid-template-columns: repeat(9, 40px);
   grid-template-rows: repeat(9, 40px);
   gap: 2px;
+  justify-content: center;
   margin: 0 auto;
-  width: fit-content;
 }
 
-.cell {
+.kare {
   width: 40px;
   height: 40px;
-  background-color: #fffbea;
+  background-color: #fff;
   border: 1px solid #001F54;
   cursor: pointer;
-  font-size: 16px;
   font-weight: bold;
+  font-size: 16px;
   color: #001F54;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.cell.revealed {
+.kare.acildi {
   background-color: #dcdcdc;
   cursor: default;
 }
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFB901;
-  text-align: center;
-  color: #001F54;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-#minefield {
-  display: grid;
-  grid-template-columns: repeat(9, 40px);
-  grid-template-rows: repeat(9, 40px);
-  gap: 2px;
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.cell {
-  width: 40px;
-  height: 40px;
-  background-color: #fffbea;
-  border: 1px solid #001F54;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: #001F54;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cell.revealed {
-  background-color: #dcdcdc;
-  cursor: default;
-}
-body {
-  font-family: Arial, sans-serif;
-  background-color: #FFB901;
-  text-align: center;
-  color: #001F54;
-  padding: 20px;
-}
-
-h1 {
-  margin-bottom: 20px;
-}
-
-#minefield {
-  display: grid;
-  grid-template-columns: repeat(9, 40px);
-  grid-template-rows: repeat(9, 40px);
-  gap: 2px;
-  margin: 0 auto;
-  width: fit-content;
-}
-
-.cell {
-  width: 40px;
-  height: 40px;
-  background-color: #fffbea;
-  border: 1px solid #001F54;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  color: #001F54;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cell.revealed {
-  background-color: #dcdcdc;
-  cursor: default;
-}
-
